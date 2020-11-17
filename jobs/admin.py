@@ -1,3 +1,11 @@
 from django.contrib import admin
+from .models import Job
 
-# Register your models here.
+@admin.register(Job)
+class JobAdmin(admin.ModelAdmin):
+    fields = ('name', 'summary', 'image')
+    list_display = ('name', 'summary', 'image')
+    list_display_links = ('name', 'summary', 'image')
+    list_filter = ('name', 'summary', 'image')
+    
+
