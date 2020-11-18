@@ -125,3 +125,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    # '/var/www/static/',
+    "images",
+    BASE_DIR / "static",
+]
+print(STATICFILES_DIRS[1])
+
+
+MEDIA_ROOT = 'images'
+MEDIA_URL = ''
